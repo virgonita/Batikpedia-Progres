@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batik Pedia</title>
+    <link href="../pages/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+</head>
+<body>
+
+    <!-- <Header> -->
+        <header id="navbar">
+            <div class="main-container">
+                <div class="nav">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="logo">
+                        <img src="../assets/tulisanlogo.png" alt="logo">
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="katalog.html">Katalog Batik</a></li>
+                            <li><a href="wisata.html">Wisata Batik</a></li>
+                            <li><a href="edukasi.html">Konten Edukasi</a></li>
+                            <li class="logo-chatbot"><a href="#Chatbot"><img src="../assets/chatbot.png" alt="logo"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    <!-- End of Header -->
+
+    <!-- Landing Page -->
+        <section id="landing">
+            <div class="landing-container">
+                <div class="landing-center">
+                    <div class="overlay">
+                        <img src="../assets/landing.png" alt="landing">
+                        <div class="text-overlay">
+                            <h2>BATIK PEDIA</h2>
+                            <h1>Karya Seni Warisan Bangsa Indonesia</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Landing Page -->
+
+    <!-- Motif Batik -->
+    <section id="motif">
+        <div class="motif-container">
+            <section class="main">
+                <div class="header-motif">
+                    <h1>Motif Batik</h1>
+                    <div class="search">
+                        <input type="text" placeholder="Cari..." style="width: 550px;">
+                        <div class="search-buttons">
+                            <button><i class="fas fa-search"></i></button>
+                            <button id="filterButton"><i class="fas fa-filter"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image">
+                        <img src="../assets/batik1.png" alt="Batik 1">
+                        <div class="description">
+                            <h3>Batik Tujuh Rupa</h3>
+                            <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../assets/batik2.png" alt="Batik 2">
+                        <div class="description">
+                            <h3>Batik Mega Mendung</h3>
+                            <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../assets/batik3.png" alt="Batik 3">
+                        <div class="description">
+                            <h3>Batik Bojonegoro</h3>
+                            <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../assets/batik4.png" alt="Batik 4">
+                        <div class="description">
+                            <h3>Batik Banyumas</h3>
+                            <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <i class="fas fa-angle-left"></i>
+                    <i class="fas fa-angle-left"></i>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <i class="fas fa-angle-right"></i>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <!-- Popup -->
+    <div id="filterPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2><i class="fas fa-filter"></i> Filter</h2>
+                <button id="closePopup"><i class="fas fa-times"></i></button>
+            </div>
+            <hr>
+            <div class="popup-body">
+                <div class="filter-section">
+                    <h3>Hapus Semua</h3>
+                    <button class="filter-option" style="background-color: #314E52; color: white; border-radius: 5px;" onclick="clearFilters()">Hapus</button>
+                </div>
+                <div class="filter-section">
+                    <h3>Kategori</h3>
+                    <div class="filter-option dropdown">
+                        <button class="dropdown-btn">Teknik Pembuatan <i class="fas fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Batik Cap (Stempel)">
+                                <span class="content">Batik Cap (Stempel)</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Batik Cap (Tradisional)">
+                                <span class="content">Batik Cap (Tradisional)</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Batik Lukis">
+                                <span class="content">Batik Lukis</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Batik Print">
+                                <span class="content">Batik Print</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Batik Canting">
+                                <span class="content">Batik Canting</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-option dropdown">
+                        <button class="dropdown-btn">Asal Daerah <i class="fas fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Jawa Timur">
+                                <span class="content">Jawa Timur</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Jawa Tengah">
+                                <span class="content">Jawa Tengah</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="filter-checkbox" value="Jawa Barat">
+                                <span class="content">Jawa Barat</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" id="batikModern" value="Batik Modern">
+                        <label for="batikModern"> Batik Modern </label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" class="filter-checkbox" id="batikTradisional" value="Batik Tradisional">
+                        <label for="batikTradisional">Batik Tradisional</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="popup-footer">
+                <button id="applyFilters" style="background-color: #314E52; color: white; border-radius: 5px;" onclick="applyFilters()">Terapkan</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of Motif -->
+
+    <!-- Berita -->
+    <section id="berita">
+        <h1 class="berita-title">Berita Terkini</h1>
+        <div class="berita-container">
+            <div class="berita-left">
+                <div class="image-berita-left">
+                    <img src="../assets/berita1.png" alt="berita1">
+                    <div class="description-berita-left">
+                        <h3>Tony Midiyanto sosok dibalik desain Batik Banyuwangi di jaket valentino Rossi</h3>
+                        <div class="date">
+                            <span><i class="fas fa-calendar-alt"></i> Jumat, 02 Feb 2024 19:17 WIB</span>
+                            <span><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="berita-right">
+                <div class="berita-card">
+                    <div class="image-berita-right">
+                        <img src="../assets/berita2.png" alt="berita2">
+                        <div class="description-berita-right">
+                            <h3>Pernah Lihat Kopi dan Teh Jadi Pewarna Batik?</h3>
+                            <div class="date">
+                                <span><i class="fas fa-calendar-alt"></i>Selasa, 30 Apr 2024 23:00 WIB</span>
+                                <span><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="berita-card">
+                    <div class="image-berita-right">
+                        <img src="../assets/berita3.png" alt="berita3">
+                        <div class="description-berita-right">
+                            <h3>Pemkab Serang Ajak Puluhan Warga Latihan Membatik di Bandung</h3>
+                            <div class="date">
+                                <span><i class="fas fa-calendar-alt"></i> Selasa, 30 Apr 2024 15:50 WIB </span>
+                                <span><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Berita -->
+
+    <!-- Sejarah -->
+    <section id="sejarah">
+        <div class="sejarah-container">
+            <div class="sejarah-left">
+                <img src="../assets/sejarah1.png" alt="sejarah1">
+            </div>
+        
+            <div class="sejarah-right">
+                <h2 class="sejarah-name">Sejarah Batik</h2>
+                <p>Batik telah menjadi bagian hidup masyarakat Indonesia sejak 1.500 tahun yang lalu. 
+                    Selama berabad-abad, Batik telah menjadi simbol dalam momen-momen besar kehidupan manusia.
+                    <br>
+                </p>
+                <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- End of Sejarah -->
+
+    <!-- Pelestarian -->
+    <section id="pelestarian">
+        <div class="pelestarian-container">
+            <div class="pelestarian-left">
+                <h2 class="pelestarian-name">Pelestarian Batik</h2>
+                <p>Dengan melestarikan batik, kita dapat memastikan bahwa keindahan dan makna 
+                    dalam setiap motif dan pola tetap terjaga untuk dinikmati oleh generasi mendatang.
+                    <br>
+                </p>
+                <button>Selengkapnya <i class="fas fa-arrow-right"></i></button>
+            </div>
+        
+            <div class="pelestarian-right">
+                <img src="../assets/pelestarian1.png" alt="pelestarian1">
+            </div>
+        </div>
+    </section>
+    <!-- End of Pelestarian -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Bantuan</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-middle">
+          <h4>Kontak</h4>
+          <p>BatikPedia@gmail.com</p>
+          <p>+62 8123-4567-890</p>
+          <p>Dapatkan Petunjuk</p>
+        </div>
+        
+        <div class="footer-right">
+          <h4>© Copyright 2024. Batik Pedia. All Rights Reserved</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+      
+    <!-- End of Footer -->
+
+    <script src="script.js"></script> 
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

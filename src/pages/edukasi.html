@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batik Pedia</title>
+    <link href="../pages/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+</head>
+<body>
+
+    <!-- <Header> -->
+        <header id="navbar">
+            <div class="main-container">
+                <div class="nav">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="logo">
+                        <img src="../assets/tulisanlogo.png" alt="logo">
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="katalog.html">Katalog Batik</a></li>
+                            <li><a href="wisata.html">Wisata Batik</a></li>
+                            <li><a href="edukasi.html">Konten Edukasi</a></li>
+                            <li class="logo-chatbot"><a href="#Chatbot"><img src="../assets/chatbot.png" alt="logo"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    <!-- End of Header -->
+
+    <!-- Landing Page -->
+        <section id="landing">
+            <div class="landing-container">
+                <div class="landing-center">
+                    <div class="overlay">
+                        <img src="../assets/edukasi.png" alt="landing">
+                        <div class="text-overlay">
+                            <h2>Konten Edukasi</h2>
+                            <h3>Mari telusuri dunia menarik membatik melalui kelas-kelas dan konten edukasi. 
+                                Temukan rahasia teknik-teknik tradisional, kisah inspiratif, 
+                                dan informasi mendalam yang akan memperkaya pengetahuan Anda tentang seni yang indah ini.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Landing Page -->
+
+    <!-- Kelas Edukasi -->
+    <section id="motif">
+        <div class="motif-container">
+            <section class="main">
+                <div class="header-motif">
+                    <h1 style="font-size: 25px;">Kelas Membatik</h1>
+                </div>
+                <div class="gallery" style="margin-top: -30px;">
+                    <div class="image">
+                        <img src="../assets/kelas1.png" alt="Kelas 1" class="gallery-image" data-info="Tour Membatik Surabaya|Gunung Anyar Harapan, ZD 26 Rungkut, Surabaya|Offline|Minggu, 16 Juni 2024. 09.00-13.00 WIB|https://www.klook.com/activity/tour-membatik-surabaya/">
+                        <div class="description">
+                            <h3 style="margin-bottom: 0;">Tour Membatik Surabaya</h3>
+                            <p style="font-size: 14px; margin: 0;">Gunung Anyar Harapan, 
+                                ZD 26 Rungkut, Surabaya</p>
+                            <button class="detail-button" id="detail-button-1" style="width: 100px;">Detail</button>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../assets/kelas2.png" alt="Kelas 2" class="gallery-image" data-info="Kelas Membatik Yogyakarta|Batik Making Course, JL. Tirtodipuran, Yogyakarta|Offline|Selasa, 14 Mei 2024. 15.00-17.00 WIB|https://www.klook.com/activity/batik-making-class-yogyakarta/">
+                        <div class="description">
+                            <h3 style="margin-bottom: 0;">Kelas Membatik Yogyakarta</h3>
+                            <p style="font-size: 14px; margin: 0;">Batik Making Course, 
+                                JL. Tirtodipuran, Yogyakarta</p>
+                            <button class="detail-button" id="detail-button-2" style="width: 100px;">Detail</button>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="../assets/kelas3.png" alt="Kelas 3" class="gallery-image" data-info="Membatik Itu Asik By Eat4Nation|Eat4Nation Garden cafe & art galery, Caruban, Madiun|Offline|Sabtu, 26 September 2024. 14.00-16.30 WIB|https://www.klook.com/activity/Eat4Nation-madiun/">
+                        <div class="description">
+                            <h3 style="margin-bottom: 0;">Membatik Itu Asik By Eat4Nation</h3>
+                            <p style="font-size: 14px; margin: 0;">Eat4Nation Garden cafe & art galery, Caruban, Madiun</p>
+                            <button class="detail-button" id="detail-button-3" style="width: 100px;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <div class="popup-kelas" id="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <h2>Kategori</h2>
+                <p><strong>Nama Kelas:</strong> <span id="class-title"></span></p>
+                <p><strong>Lokasi:</strong> <span id="class-location"></span></p>
+                <p><strong>Sesi Program:</strong> <span id="class-sesi"></span></p>
+                <p><strong>Waktu:</strong> <span id="class-time"></span></p>
+                <p><strong>Link Pendaftaran:</strong> <span id="class-link"></span></p>
+            </div>
+            <div class="popup-right">
+                <button class="close-button" id="close-button"><i class="fas fa-times"></i></button>
+                <img src="" alt="Class Image" id="class-image">
+            </div>
+        </div>
+    </div>
+    <!-- End of Kelas Edukasi -->
+
+    <!-- Konten Membatik -->
+        <section id="konten">
+            <div class="konten-container">
+                <div class="header-konten">
+                    <h1>Konten Membatik</h1>
+                </div>
+                <div class="konten-card">
+                    <div class="konten-left">
+                        <h2 class="konten-name">Menghabiskan waktu luang belajar membatik </h2>
+                        <p>Mengenal batik dari awal pembuatan, melalui serangkaian tahapan yang meliputi proses pewarnaan dan motif yang khas, 
+                            hingga menjadi karya yang indah dan bernilai seni tinggi.
+                            <br>
+                        </p>
+                    </div>
+                
+                    <div class="konten-right">
+                        <video width="640" height="360" controls>
+                            <source src="../assets/videokonten1.mp4" type="video/mp4">
+                        </video>
+                        <p> sumber: https://www.youtube.com/@TRANSTVofficial </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Konten Membatik -->
+
+    <!-- Game Membatik -->
+        <section id="game">
+            <div class="game-container">
+                <div class="header-game">
+                    <h1>Konten Membatik</h1>
+                </div>
+                <div class="game-card">
+                    <div class="game-left">
+                       <img src="../assets/Game1.png" alt="">
+                    </div>
+                
+                    <div class="game-right">
+                        <h2 class="game-name">Game edukasi tebak motif batik </h2>
+                        <p>Ayo jelajahi warisan budaya Indonesia melalui game interaktif kami. 
+                            Klik gambar motif batik dan tunjukkan sejauh mana pengetahuanmu! 
+                            Saksikanlah keindahan tradisi yang tersembunyi di setiap pola, 
+                            dan jadilah bagian dari perjalanan ini untuk memperkaya pemahaman 
+                            akan kekayaan budaya kita.
+                            <br>
+                        </p>
+                        <button>Mulai Bermain</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Game Membatik -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Bantuan</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-middle">
+          <h4>Kontak</h4>
+          <p>BatikPedia@gmail.com</p>
+          <p>+62 8123-4567-890</p>
+          <p>Dapatkan Petunjuk</p>
+        </div>
+        
+        <div class="footer-right">
+          <h4>© Copyright 2024. Batik Pedia. All Rights Reserved</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+      
+    <!-- End of Footer -->
+
+    <script src="script.js"></script> 
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

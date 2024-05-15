@@ -1,0 +1,1274 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 16px;
+    background-color: #E7E6E1;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 ;
+}
+
+ /* logo dan navbar */
+/* logo dan navbar */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Menyamakan elemen secara vertikal */
+  padding: 1.2rem 2rem; /* Atur padding sesuai kebutuhan Anda */
+  transition: 0.2s ease-in-out;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Menyamakan vertikal dengan elemen lainnya */
+}
+
+.logo img {
+  margin-right: 10px;
+  height: 1.5rem;
+}
+
+.logo a {
+  color: black;
+  font-weight: bold; /* Menambahkan ketebalan pada teks */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.logo-chatbot {
+  display: flex;
+  align-items: center; /* Menyamakan vertikal dengan elemen lainnya */
+  margin-left: auto; /* Memindahkan elemen ke sisi kanan */
+}
+
+.logo-chatbot img {
+  margin-right: 10px;
+  height: 2rem;
+}
+
+nav ul li a {
+  color: black;
+  margin-bottom: 0;
+  padding: 0.5rem 1rem; /* Atur padding sesuai kebutuhan Anda */
+}
+
+nav ul li a:hover {
+  background-color: #314E52;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Latar belakang khusus untuk gambar chatbot */
+.logo-chatbot a {
+  background-color: transparent; /* Hapus latar belakang */
+}
+
+.logo-chatbot a:hover {
+  background-color: transparent; /* Hapus latar belakang saat dihover */
+}
+
+.logo-chatbot a img {
+  transition: transform 0.3s ease-in-out; /* Efek transisi */
+}
+
+.logo-chatbot a:hover img {
+  transform: scale(1.1); /* Memperbesar gambar saat dihover */
+}
+
+/* End Of Navbar */
+
+/* home section */
+#landing {
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-center img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%; 
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 55%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 60%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.7); 
+  border-radius: 10px; 
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-overlay h2 {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+/* End of Landing */
+
+/* Motif Batik */
+#motif {
+  margin-top: 500px;
+}
+
+.motif-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-motif{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  margin-bottom: 3%;
+}
+
+.header-motif h1{
+  margin-top: 0;
+  margin-right: 83%;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #314E52;
+  border-radius: 5px;
+}
+
+.search-buttons {
+  display: flex;
+}
+
+.search button {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; 
+}
+
+.main {
+  padding: 20px;
+}
+
+.gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+
+.image {
+  text-align: center;
+  flex: 1; 
+}
+
+.image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.description {
+  padding: 10px;
+}
+
+.description h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.description button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.description button .fas {
+  margin-right: 5px;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination span {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 10px;
+  color: #314E52;
+  cursor: pointer;
+}
+
+.pagination span:hover {
+  background-color: #314E52;
+  color: white;
+  border-radius: 55px;
+}
+
+.pagination i {
+  font-size: 20px; 
+  color: #314E52; 
+  margin: 3px 5px; 
+}
+
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  z-index: 1000;
+}
+
+.popup-content {
+  max-width: 600px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.popup-header button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #D80032;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.popup-body {
+  margin-top: 20px;
+}
+
+.filter-section {
+  margin-bottom: 15px;
+}
+
+.filter-section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.filter-option label {
+  margin-left: 5px;
+}
+
+.popup-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 190px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.dropdown-content label .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content label:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* End of Dropdown */
+/* End of Popup */
+
+/* Berita */
+#berita {
+  margin-top: 130px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.berita-title {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 65px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.berita-container {
+  display: flex;
+  justify-content: center; 
+  gap: 50px; 
+}
+
+.berita-left,
+.berita-right {
+  flex: 1;
+  max-width: 500px;
+}
+
+.image-berita-left,
+.image-berita-right {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0;
+  background-color: #314E52;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-berita-left img,
+.image-berita-right img {
+  max-width: 100%; 
+  height: auto;
+  border-radius: 5px;
+}
+
+.description-berita-left,
+.description-berita-right {
+  padding: 20px; 
+}
+
+.description-berita-left h3,
+.description-berita-right h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 16px;
+  color:white;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.date span {
+  display: flex;
+  align-items: center;
+}
+
+.date span i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.description-berita-left button,
+.description-berita-right button {
+  padding: 10px 25px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.description-berita-left button .fas,
+.description-berita-right button .fas {
+  margin-right: 3px;
+}
+
+.berita-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.berita-container {
+  padding: 5px;
+}
+
+.berita-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.berita-container {
+  padding: 5px; 
+}
+/* End of Berita */
+
+/* Sejarah */
+#sejarah {
+  margin-top: 130px;
+  padding: 10px;
+  background-color: white; /* Mengubah warna latar belakang menjadi orange */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.sejarah-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.sejarah-left {
+  position: relative;
+  background-color: #F2A154; /* Set warna latar belakang ke putih */
+  border-radius: 10px; /* Mengatur border-radius */
+  padding: 15px; /* Menambahkan padding */
+  z-index: 1; 
+  top: 50px;
+}
+
+.sejarah-left img {
+  width: 250px;
+  height: 300px;
+  margin-bottom: 6rem;
+  margin-right: 3rem;
+  position: relative;
+  top: 80px;
+}
+
+.sejarah-right {
+  max-width: 700px;
+  z-index: 2; /* Menjadikan konten sejarah-right berada di atas gambar */
+}
+
+.sejarah-name {
+  font-size: 35px;
+  align-items: center;
+  color: black;
+}
+
+.sejarah-right p {
+  font-size: 16px;
+  color: black;
+}
+
+.sejarah-right button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sejarah-right button .fas {
+  margin-right: 5px;
+}
+/* End of Sejarah */
+
+/* Pelestarian */
+#pelestarian {
+  margin-top: 130px;
+  padding: 10px;
+  background-color: white; /* Mengubah warna latar belakang menjadi orange */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.pelestarian-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.pelestarian-right {
+  position: relative;
+  background-color: #31A0B0; /* Set warna latar belakang ke putih */
+  border-radius: 10px; /* Mengatur border-radius */
+  padding: 15px; /* Menambahkan padding */
+  z-index: 1; 
+  top: 50px;
+}
+
+.pelestarian-right img {
+  width: 250px;
+  height: 300px;
+  margin-bottom: 6rem;
+  margin-right: 3rem;
+  position: relative;
+  top: 80px;
+}
+
+.pelestarian-left {
+  max-width: 700px;
+  z-index: 2; /* Menjadikan konten sejarah-right berada di atas gambar */
+}
+
+.pelestarian-name {
+  font-size: 35px;
+  align-items: center;
+  color: black;
+}
+
+.pelestarian-left p {
+  font-size: 16px;
+  color: black;
+}
+
+.pelestarian-left button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pelestarian-left button .fas {
+  margin-right: 5px;
+}
+/* End of Pelestarian */
+  
+/* Footer */
+footer {
+  margin-top: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #314E52;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  width: 30%;
+  color: white;
+}
+
+.footer-left a {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-left h4,
+.footer-left ul {
+  margin-bottom: 10px; /* Menambahkan jarak bawah sebelum dan sesudah tulisan dan daftar */
+}
+
+.footer-middle h4,
+.footer-middle p {
+  margin-bottom: 5px; /* Mengurangi jarak bawah antara tulisan dan paragraf */
+}
+
+.footer-middle p:last-child {
+  margin-bottom: 10px; /* Menambahkan jarak bawah sebelum bagian berikutnya */
+}
+
+
+.footer-left ul li,
+.footer-middle h4,
+.footer-middle p {
+  margin-bottom: 5px; /* Menambahkan jarak antara item-item */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: white; 
+}
+
+.social-icons a:hover {
+  color: #333; 
+}
+/* End of Footer */
+
+/* Katalog Tradisional*/
+#katalog-tradisional {
+  margin-top: 500px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.katalog-tradisional-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.katalog-tradisional-left {
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.katalog-tradisional-left img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin-right: auto; /* Geser ke sisi kanan sejauh mungkin */
+  margin-left: auto; /* Geser ke sisi kiri sejauh mungkin */
+}
+
+.katalog-tradisional-right {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.katalog-tradisional-name {
+  font-size: 35px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.katalog-tradisional-right p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.katalog-tradisional-right a {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.katalog-tradisional-right a .fas {
+  margin-right: 5px;
+}
+/* End of Katalog Tradisional*/
+
+/* Katalog Modern*/
+#katalog-modern {
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.katalog-modern-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.katalog-modern-right {
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.katalog-modern-right img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin-left: auto; /* Geser ke sisi kiri sejauh mungkin */
+  margin-right: auto; /* Geser ke sisi kanan sejauh mungkin */
+}
+
+.katalog-modern-left {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.katalog-modern-name {
+  font-size: 35px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.katalog-modern-left p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.katalog-modern-left a {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.katalog-modern-left a .fas {
+  margin-right: 5px;
+}
+/* End of Katalog Modern*/
+
+/* Wisata Jatim*/
+#wisata-jatim {
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.wisata-jatim-container {
+  display: flex;
+  align-items: center; /* Menggeser ke posisi vertikal tengah */
+}
+
+.wisata-jatim-left {
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  flex: 1; /* Memberikan ruang yang sama untuk gambar */
+}
+
+.wisata-jatim-left img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+}
+
+.wisata-jatim-right {
+  max-width: 500px;
+  z-index: 2;
+  flex: 1; /* Memberikan ruang yang sama untuk teks */
+}
+
+.wisata-jatim-name {
+  font-size: 35px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.wisata-jateng-left p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.wisata-jatim-right button {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wisata-jatim-right button .fas {
+  margin-right: 5px;
+}
+/* End of Wisata Jatim*/
+
+/* Wisata Jateng */
+#wisata-jateng {
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.wisata-jateng-container {
+  display: flex;
+  justify-content: flex-end; /* Menggeser ke sisi kanan */
+  align-items: center;
+}
+
+.wisata-jateng-right {
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px; /* Menggeser ke sisi kiri sedikit agar ada jarak */
+}
+
+.wisata-jateng-right img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+}
+
+.wisata-jateng-left {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.wisata-jateng-name {
+  font-size: 35px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.wisata-jateng-left p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.wisata-jateng-left button {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wisata-jateng-left button .fas {
+  margin-right: 5px;
+}
+/* End of Wisata Jateng */
+
+/* Konten Membatik */
+#konten {
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.konten-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Geser ke kiri */
+}
+
+.header-konten {
+  margin-bottom: 20px;
+}
+
+.header-konten h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.konten-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #314E52;
+  border-radius: 10px;
+  
+}
+
+.konten-right p{
+  color: white;
+  margin: 0;
+  font-size: 12px;
+  text-align: right;
+}
+
+.konten-left,
+.konten-right {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.konten-name {
+  font-size: 25px;
+  color: white;
+  margin-top: 100px;
+}
+
+.konten-left p {
+  font-size: 14px;
+  color: white;
+}
+/* End of Konten Membatik */
+
+/* Game Membatik */
+#game {
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Geser ke kiri */
+}
+
+.header-game {
+  margin-bottom: 20px;
+}
+
+.header-game h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.game-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #314E52;
+  border-radius: 10px;
+  
+}
+
+.game-left img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+}
+
+.game-left p{
+  color: white;
+  margin: 0;
+  font-size: 12px;
+  text-align: right;
+}
+
+.game-right,
+.game-left {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.game-name {
+  font-size: 25px;
+  color: white;
+  margin-top: 90px;
+}
+
+.game-right p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.6; 
+}
+
+.game-right button {
+  padding: 8px 20px;
+  border: none;
+  color: #314E52;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* End of Game Membatik */
+
+/* Batik Modern */
+#batik-modern {
+  margin-top: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.batik-modern-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.batik-modern-left,
+.batik-modern-right {
+  position: relative;
+  text-align: center;
+}
+
+.small-image,
+.detail-card {
+  position: absolute;
+  top: 10px;
+}
+
+.detail-card {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 200px;
+  right: 50px;
+  border-radius: 10px
+}
+
+.small-image img {
+  width: 100px; /* Atur lebar gambar kecil */
+  height: auto;
+}
+
+.batik-modern-left .small-image {
+  margin-left: 50px; /* Geser ke kiri */
+  margin-top: 80px;
+}
+
+.batik-modern-right .small-image {
+  right: 310px; /* Geser ke kanan */
+  margin-top: 80px;
+}
+
+.batik-modern-left img,
+.batik-modern-right img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.batik-modern-name {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.detail-card p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.detail-card button {
+  padding: 8px 20px;
+  border: none;
+  color: white;
+  background-color: #314E52;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+/* End of Batik Modern */
+
+/* Popup Kelas */
+.popup-kelas {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.popup-kelas .popup-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-kelas .popup-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.popup-kelas .popup-right {
+  flex: 1;
+  text-align: center;
+}
+
+.popup-kelas .close-button {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #D80032;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.popup-kelas img {
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+}
+
+.popup-kelas p {
+  margin-bottom: 10px;
+}
+/*End of Popup Kelas */
+
+#details {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.details-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-content button{
+  background-color: #314E52;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-content h2 {
+  margin-bottom: 0;
+}
+
+.applied-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+#appliedFilters > *:not(:last-child) {
+  margin-right: 30px; /* Memberikan jarak kanan pada semua elemen kecuali yang terakhir */
+}
+
+#isi-details {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: white;
+}
+
+.isi-details-content {
+  padding: 20px;
+}
